@@ -18,6 +18,7 @@
 		63E24CFC23FD650A00855895 /* BackgroundSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E24CFB23FD650A00855895 /* BackgroundSetUp.swift */; };
 		63E24CFE23FD6C7700855895 /* HojeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E24CFD23FD6C7700855895 /* HojeViewController.swift */; };
 		63E24D0023FD860300855895 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E24CFF23FD860300855895 /* WeatherModel.swift */; };
+		63FA2E6823FF769E004C742B /* DayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63FA2E6723FF769E004C742B /* DayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		63E24CFB23FD650A00855895 /* BackgroundSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSetUp.swift; sourceTree = "<group>"; };
 		63E24CFD23FD6C7700855895 /* HojeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HojeViewController.swift; sourceTree = "<group>"; };
 		63E24CFF23FD860300855895 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		63FA2E6723FF769E004C742B /* DayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +68,14 @@
 		6350D6C623FCCC0900F91970 /* WeatherApp2 */ = {
 			isa = PBXGroup;
 			children = (
-				63E24CF623FD642100855895 /* Model */,
-				63E24CF523FD641A00855895 /* View */,
-				63E24CF423FD640B00855895 /* Controller */,
 				6350D6C723FCCC0900F91970 /* AppDelegate.swift */,
 				6350D6C923FCCC0900F91970 /* SceneDelegate.swift */,
 				6350D6D223FCCC0A00F91970 /* LaunchScreen.storyboard */,
 				6350D6D523FCCC0A00F91970 /* Info.plist */,
-				63E24CFB23FD650A00855895 /* BackgroundSetUp.swift */,
+				63FA2E6623FF6FE8004C742B /* EverythingElse */,
+				63E24CF623FD642100855895 /* Model */,
+				63E24CF523FD641A00855895 /* View */,
+				63E24CF423FD640B00855895 /* Controller */,
 			);
 			path = WeatherApp2;
 			sourceTree = "<group>";
@@ -84,6 +86,7 @@
 				63E24CF723FD647C00855895 /* TableViewController.swift */,
 				63E24CF923FD64BE00855895 /* InicialViewController.swift */,
 				63E24CFD23FD6C7700855895 /* HojeViewController.swift */,
+				63FA2E6723FF769E004C742B /* DayViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -92,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				6350D6CD23FCCC0900F91970 /* Main.storyboard */,
-				6350D6D023FCCC0A00F91970 /* Assets.xcassets */,
 				63E24CF223FD62A000855895 /* font */,
+				6350D6D023FCCC0A00F91970 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +107,14 @@
 				63E24CFF23FD860300855895 /* WeatherModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		63FA2E6623FF6FE8004C742B /* EverythingElse */ = {
+			isa = PBXGroup;
+			children = (
+				63E24CFB23FD650A00855895 /* BackgroundSetUp.swift */,
+			);
+			path = EverythingElse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +196,7 @@
 				63E24CFC23FD650A00855895 /* BackgroundSetUp.swift in Sources */,
 				6350D6CA23FCCC0900F91970 /* SceneDelegate.swift in Sources */,
 				63E24CF823FD647C00855895 /* TableViewController.swift in Sources */,
+				63FA2E6823FF769E004C742B /* DayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,14 +12,17 @@ class TodayViewController: UIViewController {
     
 
     override func viewDidLoad() {super.viewDidLoad()
-        
-        
+            
         setWeatherToday()
         setWeatherTomorrow(myIndex: myWeatherTypeIndex)
         
         fullWeekButton.layer.cornerRadius = 20
     }
-
+    
+      override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          navigationController?.setNavigationBarHidden(true, animated: animated)
+      }
     
     //------- TODAY OUTLETS ---------
     @IBOutlet weak var weatherLabelToday: UILabel!
@@ -31,20 +34,17 @@ class TodayViewController: UIViewController {
     @IBOutlet weak var windToday: UILabel!
     @IBOutlet weak var precipitationToday: UILabel!
     @IBOutlet weak var fullWeekButton: UIButton!
-    
-    
+
     //------- TOMORROW OUTLETS ---------
     @IBOutlet weak var weatherImageTomorrow: UIImageView!
     @IBOutlet weak var weatherMaxTomorrow: UILabel!
     @IBOutlet weak var weatherMinTomorrow: UILabel!
-    
+  
     //------- CONTROLLERS ---------
     
-    
     func setWeatherToday() -> Int{
-        
+      
         let weatherToday = myWeatherArray[myWeatherTypeIndex]
-        
         weatherLabelToday.text = "\(weatherToday)"
         weatherImageToday.image = (UIImage.init(named: "image\(weatherToday)"))
         weatherTemperatureToday.text = "\(weatherToday.getWeatherType().temperature)º"
@@ -60,17 +60,14 @@ class TodayViewController: UIViewController {
     func setWeatherTomorrow(myIndex : Int){
         
         let weatherTomorrow : WeatherTypes
-        
         if myIndex < 6 {
             weatherTomorrow = myWeatherArray[myIndex + 1]
         } else{
             weatherTomorrow = myWeatherArray[0]
         }
-        
         weatherImageTomorrow.image = (UIImage.init(named: "image\(weatherTomorrow)"))
         weatherMaxTomorrow.text = "\(weatherTomorrow.getWeatherType().max)"
         weatherMinTomorrow.text = "\(weatherTomorrow.getWeatherType().min)"
         print("\(weatherTomorrow)")
-      //  print("\(myWeatherArray[weatherTomorrow])")
     }
 }

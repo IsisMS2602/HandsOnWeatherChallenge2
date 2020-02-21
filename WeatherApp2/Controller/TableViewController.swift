@@ -8,6 +8,8 @@
 
 import UIKit
 
+var vaiEstudar : String = ""
+
 class TableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -21,15 +23,21 @@ class TableViewController: UITableViewController {
         saturdayWeather()
         sundayWeather()
     }
-    
-    
-    //------- MONDAY OUTLETS ---------
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+        //------- MONDAY OUTLETS ---------
     @IBOutlet weak var mondayTableImage: UIImageView!
     @IBOutlet weak var mondayLabelMax: UILabel!
     @IBOutlet weak var mondayLabelMin: UILabel!
     @IBOutlet weak var button: UIButton!
     //------- MONDAY ACTIONS ---------
     @IBAction func mondayWeatherButton(_ sender: Any) {
+        vaiEstudar = "Monday"
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
     }
     //------- TUESDAY OUTLETS ---------
     @IBOutlet weak var tuesdayImage: UIImageView!
@@ -38,6 +46,9 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var tuesdayButton: UIButton!
     //------- TUESDAY ACTIONS ---------
    @IBAction func tuesdayWeatherButton(_ sender: Any) {
+    vaiEstudar = "Tuesday"
+    if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
    }
     //------- WEDNESDAY OUTLETS ---------
     @IBOutlet weak var wednesdayImage: UIImageView!
@@ -46,6 +57,9 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var wednesdayButton: UIButton!
     //------- WEDNESDAY ACTIONS ---------
     @IBAction func wednesdayWeatherButton(_ sender: Any) {
+        vaiEstudar = "Wednesday"
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
     }
     //------- THURSDAY OUTLETS ---------
     @IBOutlet weak var thursdayImage: UIImageView!
@@ -54,6 +68,9 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var thursdayButton: UIButton!
     //------- THURSDAY ACTIONS ---------
     @IBAction func thursdayWeatherButton(_ sender: Any) {
+        vaiEstudar = "Thursday"
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
     }
     //------- FRIDAY OUTLETS ---------
     @IBOutlet weak var fridayImage: UIImageView!
@@ -62,6 +79,9 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var fridayButton: UIButton!
     //------- FRIDAY ACTIONS ---------
     @IBAction func fridayWeatherButton(_ sender: Any) {
+        vaiEstudar = "Friday"
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
     }
     //------- SATURDAY OUTLETS ---------
     @IBOutlet weak var saturdayImage: UIImageView!
@@ -70,15 +90,20 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var saturdayWeatherButton: UIButton!
     //------- SATURDAY ACTIONS ---------
     @IBAction func saturdayButton(_ sender: Any) {
+        vaiEstudar = "Saturday"
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
     }
     //------- SUNDAY OUTLETS ---------
     @IBOutlet weak var sundayImage: UIImageView!
     @IBOutlet weak var sundayLabelMax: UILabel!
     @IBOutlet weak var sundayLabelMin: UILabel!
     @IBOutlet weak var sundayButton: UIButton!
-    
-    
-    
+    @IBAction func sundayWeatherButton(_ sender: Any) {
+        vaiEstudar = "Sunday"
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Day") as? DayViewController
+            {present(vc, animated: true, completion: nil)}
+    }
     
     func mondayWeather(){
         mondayTableImage.image = (UIImage(named: "image\(weatherTypeMonday)"))
